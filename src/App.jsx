@@ -2,11 +2,9 @@
 import React, { useEffect, useState } from 'react';
 import { jsx } from 'theme-ui';
 
-import useMode from './lib/use-mode';
+import Nav from './components/Nav';
 
 function App() {
-  const { colorMode, toggleMode } = useMode();
-
   // Create the count state.
   const [count, setCount] = useState(0);
   // Create the counter (+1 every second).
@@ -16,16 +14,15 @@ function App() {
   }, [count, setCount]);
 
   return (
-    <div className="container flex items-center justify-center h-screen text-3xl">
-      <div className="mx-2 sm:mx-4 dark:text-yellow-500">
-        Page has been open for <code>{count}</code> seconds.
+    <>
+      <Nav />
+
+      <div className="container flex items-center justify-center h-screen text-3xl">
+        <div className="mx-2 sm:mx-4 dark:text-yellow-500">
+          Page has been open for <code>{count}</code> seconds.
+        </div>
       </div>
-      <div>
-        <button type="button" className="" onClick={toggleMode}>
-          {colorMode}
-        </button>
-      </div>
-    </div>
+    </>
   );
 }
 
