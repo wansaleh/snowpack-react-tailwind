@@ -3,7 +3,8 @@ module.exports = {
   extends: '@snowpack/app-scripts-react',
   mount: {
     public: { url: '/', static: true },
-    src: { url: '/dist' }
+    src: { url: '/dist' },
+    config: { url: '/config' }
   },
   plugins: [
     // '@snowpack/plugin-react-refresh',

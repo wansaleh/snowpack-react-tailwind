@@ -4,7 +4,9 @@ module.exports = {
   plugins: ['simple-import-sort'],
   globals: {
     graphql: false,
-    tw: true
+    tw: true,
+    window: true,
+    document: true
   },
   rules: {
     'no-console': process.env.NODE_ENV === 'production' ? 2 : 0,

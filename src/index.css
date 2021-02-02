@@ -9,7 +9,3 @@
     padding: 1rem;
   }
 }
-
-body {
-  @apply text-white bg-gray-900;
-}
