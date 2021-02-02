@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 1rem;
+  }
+}
+
+body {
+  @apply text-white bg-gray-900;
+}
